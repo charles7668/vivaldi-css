@@ -1,0 +1,43 @@
+.inner > div:nth-of-type(2) {
+  width: 25px !important;
+}
+
+#tabs-tabbar-container.left {
+  left: 0;
+}
+
+#tabs-tabbar-container:hover {
+  position: fixed;
+  left: 0;
+  z-index: 9999999;
+  height: 100%;
+  transition-property: width;
+  transition-duration: 0.25s;
+  transition-delay: 0.25s;
+  transition-timing-function: ease-in;
+}
+
+#tabs-container.left {
+  position: relative;
+  color: var(--colorFg) !important;
+  background-color: var(--colorBg);
+  height: 100%;
+}
+
+#tabs-tabbar-container:not(:hover) {
+  height: 100%;
+  position: fixed;
+  background-color: var(--colorBg);
+  left: 0;
+}
+
+.tab-strip {
+  max-height: calc(100%);
+  display: block;
+  margin-bottom: 50px;
+  overflow-y: overlay !important;
+}
+
+#tabs-container:not(:hover) .tab-strip {
+  overflow: hidden !important;
+}
