@@ -1,15 +1,20 @@
 .inner > div:nth-of-type(2) {
-  width: 25px !important;
+  width: 29px !important;
 }
-
-#tabs-tabbar-container.left {
+#tabs-tabbar-container:not(:hover) {
+  width: 0 !important;
+  position: relative;
+  height: 100%;
+  z-index: 99999999;
   left: 0;
 }
 
-#tabs-tabbar-container:hover {
-  position: fixed;
+#tabs-tabbar-container.left:hover {
+  position: relative;
   left: 0;
   z-index: 9999999;
+  color: var(--colorFg) !important;
+  background-color: var(--colorBg);
   height: 100%;
   transition-property: width;
   transition-duration: 0.25s;
@@ -19,25 +24,5 @@
 
 #tabs-container.left {
   position: relative;
-  color: var(--colorFg) !important;
   background-color: var(--colorBg);
-  height: 100%;
-}
-
-#tabs-tabbar-container:not(:hover) {
-  height: 100%;
-  position: fixed;
-  background-color: var(--colorBg);
-  left: 0;
-}
-
-.tab-strip {
-  max-height: calc(100%);
-  display: block;
-  margin-bottom: 50px;
-  overflow-y: overlay !important;
-}
-
-#tabs-container:not(:hover) .tab-strip {
-  overflow: hidden !important;
 }
